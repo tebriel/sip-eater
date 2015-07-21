@@ -10,7 +10,7 @@ router.post('/', function(req, res, next) {
     console.log(JSON.stringify(req.body, null, 2));
     response = '<?xml version="1.0" encoding="UTF-8"?>' +
                '<Response>' +
-               '<Redirect method="POST">http://pigeons.com/twiml.xml</Redirect>' +
+               '<Redirect method="POST">https://demo.twilio.com/welcome/voice/</Redirect>' +
                '</Response>'
     res.send(response)
 });
