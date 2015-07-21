@@ -8,7 +8,11 @@ router.get('/', function(req, res, next) {
 
 router.post('/', function(req, res, next) {
     console.log(JSON.stringify(req.body, null, 2));
-    res.send('Accepted')
+    response = '<?xml version="1.0" encoding="UTF-8"?>' +
+               '<Response>' +
+               '<Redirect method="POST">http://pigeons.com/twiml.xml</Redirect>' +
+               '</Response>'
+    res.send(response)
 });
 
 module.exports = router;
